@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Custom fonts :-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="style.css">
+    <title>Sujet 1</title>
+</head>
+<body>
+    <h1>COLLABORATIVE PAINTING</h1>
+    <div class="userinfo">
+		<form>
+			<input type="text" id="username_field" placeholder="Username">
+			<button id="submit_username" onclick="registerUser(); return false">SUBMIT</button>
+		</form>
+    </div>
+    <div class="userinfo">
+        <span id="user_message">You are currently not registered. Register to be able to see your drawings<br>Should be more than 2 characters</span><br>
+        <span id="last_drawer"></span>
+    </div>
+    <div id='menu'>
+        <div class="controlbar">
+            <label for="form">Canvas form</label><br>
+            <select id="form">
+                <option value="triangle">Triangle</option>
+                <option value="square">Square</option>
+                <option value="circle">Circle</option>
+            </select>
+            <br>
+        </div>
+        <div class="controlbar">
+            <label for="div_border">Canvas border color</label><br>
+            <input id="div_border" class="picker" type="color"><br>
+        </div>
+        <div class="controlbar">
+            <label for="canvas_background">Canvas background color</label><br>
+            <input id="canvas_background" type="color"><br>
+        </div>
+        <div class="controlbar">
+            <label for="border_thickness">Border thickness</label><br>
+            <select id="border_thickness">
+                <option value="2">2px</option>
+                <option value="4">4px</option>
+                <option value="6">6px</option>
+                <option value="8">8px</option>
+                <option value="10">10px</option>
+                <option value="20">20px</option>
+            </select>
+            <br>
+        </div>
+        <div class="controlbar">
+            <label for="figure_size">Figure size</label><br>
+            <select id="figure_size">
+                <option value="20">20px</option>
+                <option value="40">40px</option>
+                <option value="60">60px</option>
+                <option value="80">80px</option>
+                <option value="100">100px</option>
+                <option value="200">200px</option>
+            </select>
+            <br>
+        </div>
+        <div class="controlbar">
+            <label for="pencil_color">Pencil color</label><br>
+            <input id="pencil_color" type="color"><br>
+        </div>
+        <div class="controlbar">
+            <label for="pencil_size">Pencil size</label><br>
+            <select id="pencil_size">
+                <option value="2">2px</option>
+                <option value="4">4px</option>
+                <option value="6">6px</option>
+                <option value="8">8px</option>
+                <option value="10">10px</option>
+                <option value="20">20px</option>
+            </select>
+            <br>
+        </div>
+        <div class="controlbar">
+            <label for="draw">Figure size</label><br>
+            <button onclick="draw()" disabled id="draw">DRAW</button><br>
+        </div>
+		<div class="controlbar" id='openButton'>
+            <label for="open">Save the canvas</label><br>
+            <button onclick='screenShot()' disabled id='open'>SCREENSHOT</button><br>
+        </div>
+    </div>
+	<div>
+		<label for="refresh">Refresh canvas</label><br>
+		<button onclick='document.location.reload();'>REFRESH</button><br>
+	</div>
+	
+
+
+    <canvas id="canvas">
+    </canvas>
+</body>
+</html>
+
+<script src="../socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+
