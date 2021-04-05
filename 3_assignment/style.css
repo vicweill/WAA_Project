@@ -1,0 +1,107 @@
+h1 {
+	text-align: center;
+	font-weight: bold;
+}
+
+img {
+	height: 30%;
+}
+
+form {
+	text-align: center;
+}
+
+input {
+	background:#c3cfe2 50%;
+	height: 30px;
+	width: 250;
+	border-radius: 10px;
+	border: none;
+	text-align: center;
+}
+
+.true {
+	color: green;
+}
+
+.false {
+	color: red;
+}
+
+.submit {
+	text-align: center;
+}
+
+.main {
+	margin: 0 auto;
+	max-width: 800;
+	margin-bottom: 100;
+}
+
+.movie {
+	margin-bottom: 10;
+}
+
+.poster {
+	float: left;
+	margin-right: 50px;
+}
+
+.portrait {
+	text-align: center;
+}
+
+.bloc {
+	display: block;
+	clear: both;
+}
+
+.gradient {
+	background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+	font-family: 'Open Sans', sans-serif;
+}
+
+.btn-grad {background-image: linear-gradient(to right, #757F9A 0%, #D7DDE8  51%, #757F9A  100%)}
+.btn-grad {
+   margin: 10px;
+   height: 30px;
+   width: 250px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 1s;
+   background-size: 200% auto;
+   color: rgb(0, 0, 0);
+   border-radius: 10px;
+   border: none;
+   font-family: 'Open Sans', sans-serif;
+   font-weight: bold;
+}
+
+.btn-grad:hover {
+   background-position: right center;
+   color: rgb(0, 0, 0);
+   text-decoration: none;
+}
+
+.reset { text-align: center;}
+.btn-reset {background-image: linear-gradient(to right, #b45353 0%, #D7DDE8  51%, #b45353  100%)}
+.btn-reset {
+	margin: 10px;
+	height: 30px;
+	width: 250px;
+	text-align: center;
+	text-transform: uppercase;
+	transition: 1s;
+	background-size: 200% auto;
+	color: rgb(0, 0, 0);
+	border-radius: 10px;
+	border: none;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+}
+ 
+.btn-reset:hover {
+	background-position: right center;
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+}
